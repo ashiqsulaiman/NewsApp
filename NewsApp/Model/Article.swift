@@ -41,10 +41,10 @@ class Article: Object, Decodable {
     dynamic var source: Source?
     @objc dynamic var author: String?
     @objc dynamic var title: String = ""
-    @objc dynamic var articleDescription: String = ""
-    @objc dynamic var url: String = ""
-    @objc dynamic var urlToImage: String = ""
-    @objc dynamic var publishedAt: String = ""
+    @objc dynamic var articleDescription: String?
+    @objc dynamic var url: String?
+    @objc dynamic var urlToImage: String?
+    @objc dynamic var publishedAt: String?
     @objc dynamic var content: String?
     
     enum CodingKeys: String, CodingKey {
@@ -59,10 +59,10 @@ class Article: Object, Decodable {
         self.source = try container.decodeIfPresent(Source.self, forKey: .source)
         self.author = try container.decodeIfPresent(String.self, forKey: .author)
         self.title = try container.decode(String.self, forKey: .title)
-        self.articleDescription = try container.decode(String.self, forKey: .articleDescription)
-        self.url = try container.decode(String.self, forKey: .url)
-        self.urlToImage = try container.decode(String.self, forKey: .urlToImage)
-        self.publishedAt = try container.decode(String.self, forKey: .publishedAt)
+        self.articleDescription = try container.decodeIfPresent(String.self, forKey: .articleDescription)
+        self.url = try container.decodeIfPresent(String.self, forKey: .url)
+        self.urlToImage = try container.decodeIfPresent(String.self, forKey: .urlToImage)
+        self.publishedAt = try container.decodeIfPresent(String.self, forKey: .publishedAt)
         self.content = try container.decodeIfPresent(String.self, forKey: .content)
     }
 }

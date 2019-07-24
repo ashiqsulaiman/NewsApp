@@ -7,24 +7,55 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DetailViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var articleImage: UIImageView!
+    @IBOutlet weak var headlineLabel: UILabel!
+    @IBOutlet weak var sourceLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
+    
+    let colours = ColourScheme()
+    var selectedArticle: Article?
+    let articleVM = ArticleViewModel()
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+        updateView()
     }
-    */
+    
+    func updateView(){
+        if let article = selectedArticle {
+        headlineLabel.text = article.title
+        sourceLabel.text = article.source?.name
+        dateLabel.text = articleVM.convertDateFormat(article.publishedAt!)
+        contentLabel.text = article.content
+        articleImage?.sd_setImage(with: URL(string: article.urlToImage ?? ""), placeholderImage: UIImage(named: "placeholder.png"))
+        }
+    }
+    
+    func setupUI(){
+        headlineLabel.font = UIFont.appBoldFontWith(size: 29)
+        sourceLabel.font = UIFont.appRegularFontWith(size: 20.0)
+        dateLabel.font = UIFont.appRegularFontWith(size: 20.0)
+        contentLabel.font = UIFont.appRegularFontWith(size: 12.0)
+        headlineLabel.textColor = colours.mainTextColor
+        dateLabel.textColor = colours.mainTextColor
+        sourceLabel.textColor = colours.mainTextColor
+        contentLabel.textColor = colours.subTextColor
+        articleImage.contentMode = .scaleAspectFill
+        self.view.backgroundColor = colours.navBarTheme
+    }
 
+    @IBAction func dismissView(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }

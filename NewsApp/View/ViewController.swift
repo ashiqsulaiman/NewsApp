@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
     let colours = ColourScheme()
     let ArticleVM = ArticleViewModel()
     let headlineNib = UINib(nibName: "HeadlineCell", bundle: nil)
+    let realm = try! Realm()
     @IBOutlet weak var headlinesTable: UITableView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -23,7 +25,7 @@ class ViewController: UIViewController {
         setupUI()
         headlinesTable.delegate = self
         headlinesTable.dataSource = self
-        ArticleVM.getArticles()
+        getArticles()
     }
 
     
@@ -38,6 +40,17 @@ class ViewController: UIViewController {
         headlinesTable.register(headlineNib, forCellReuseIdentifier: "headlineCell")
         headlinesTable.backgroundColor = colours.bgColor
         headlinesTable.separatorColor = .clear
+        //View
+        self.view.backgroundColor = colours.bgColor
+        
+    }
+    
+    func getArticles(){
+        ArticleVM.getArticles { (success) in
+            if success {
+                self.headlinesTable.reloadData()
+            }
+        }
     }
 }
 

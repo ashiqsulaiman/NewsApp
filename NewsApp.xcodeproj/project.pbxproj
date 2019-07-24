@@ -17,6 +17,7 @@
 		5B12EC9E22E6F3B1002BE87D /* HeadlinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12EC9D22E6F3B1002BE87D /* HeadlinesView.swift */; };
 		5B12ECA222E7012A002BE87D /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12ECA122E7012A002BE87D /* Article.swift */; };
 		5B12ECA822E70C3A002BE87D /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12ECA722E70C3A002BE87D /* ArticleViewModel.swift */; };
+		5B12ECAA22E83364002BE87D /* RealmExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12ECA922E83364002BE87D /* RealmExtensions.swift */; };
 		5B2A15A622E6BAED004A93AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2A15A522E6BAED004A93AD /* AppDelegate.swift */; };
 		5B2A15A822E6BAED004A93AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2A15A722E6BAED004A93AD /* ViewController.swift */; };
 		5B2A15AB22E6BAED004A93AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2A15A922E6BAED004A93AD /* Main.storyboard */; };
@@ -67,6 +68,7 @@
 		5B12EC9D22E6F3B1002BE87D /* HeadlinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesView.swift; sourceTree = "<group>"; };
 		5B12ECA122E7012A002BE87D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		5B12ECA722E70C3A002BE87D /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		5B12ECA922E83364002BE87D /* RealmExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtensions.swift; sourceTree = "<group>"; };
 		5B2A15A222E6BAED004A93AD /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2A15A522E6BAED004A93AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B2A15A722E6BAED004A93AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				5BF4A7F522E6C928003796F6 /* FontConfig.swift */,
 				5B12EC9222E6D223002BE87D /* Loader.swift */,
 				5B12EC9722E6E11C002BE87D /* Colors.swift */,
+				5B12ECA922E83364002BE87D /* RealmExtensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				5B12ECA222E7012A002BE87D /* Article.swift in Sources */,
 				5BF4A7F222E6C7B0003796F6 /* NetworkManager.swift in Sources */,
 				5B12ECA822E70C3A002BE87D /* ArticleViewModel.swift in Sources */,
+				5B12ECAA22E83364002BE87D /* RealmExtensions.swift in Sources */,
 				5B12EC9822E6E11C002BE87D /* Colors.swift in Sources */,
 				5B2A15A822E6BAED004A93AD /* ViewController.swift in Sources */,
 				5BF4A7F622E6C928003796F6 /* FontConfig.swift in Sources */,

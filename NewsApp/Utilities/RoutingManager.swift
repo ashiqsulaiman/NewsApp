@@ -37,3 +37,19 @@ fileprivate extension UIStoryboard {
     }
 }
 
+class Router {
+    func popTopViewController(){
+        if let topVC = UIApplication.topViewController() {
+            topVC.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    func loadDetailView(with article: Article){
+        let view: DetailViewController = UIStoryboard.load(from: .main, identifier: .detail) as! DetailViewController
+        view.selectedArticle = article
+        if let topVC = UIApplication.topViewController() {
+            topVC.navigationController?.present(view, animated: true, completion: {})
+        }
+    }
+}
+
