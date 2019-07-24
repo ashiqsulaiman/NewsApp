@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     let colours = ColourScheme()
+    let ArticleVM = ArticleViewModel()
     let headlineNib = UINib(nibName: "HeadlineCell", bundle: nil)
     @IBOutlet weak var headlinesTable: UITableView!
     
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
         setupUI()
         headlinesTable.delegate = self
         headlinesTable.dataSource = self
+        ArticleVM.getArticles()
     }
 
     
@@ -39,12 +41,3 @@ class ViewController: UIViewController {
     }
 }
 
-
-
-
-
-
-
-//        NetworkManager.sharedInstance().performNetworkOperation(url: NewsEndpoint().getHeadlines(for: "us"), httpMethod: .get, parameters: [:], blockActivityOnLoader: true, shouldHandleError: false) { (response) in
-//print(response.result.value)
-//}

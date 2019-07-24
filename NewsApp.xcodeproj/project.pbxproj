@@ -15,6 +15,8 @@
 		5B12EC9B22E6EFD1002BE87D /* HeadlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12EC9922E6EFD1002BE87D /* HeadlineCell.swift */; };
 		5B12EC9C22E6EFD1002BE87D /* HeadlineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B12EC9A22E6EFD1002BE87D /* HeadlineCell.xib */; };
 		5B12EC9E22E6F3B1002BE87D /* HeadlinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12EC9D22E6F3B1002BE87D /* HeadlinesView.swift */; };
+		5B12ECA222E7012A002BE87D /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12ECA122E7012A002BE87D /* Article.swift */; };
+		5B12ECA822E70C3A002BE87D /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12ECA722E70C3A002BE87D /* ArticleViewModel.swift */; };
 		5B2A15A622E6BAED004A93AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2A15A522E6BAED004A93AD /* AppDelegate.swift */; };
 		5B2A15A822E6BAED004A93AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2A15A722E6BAED004A93AD /* ViewController.swift */; };
 		5B2A15AB22E6BAED004A93AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2A15A922E6BAED004A93AD /* Main.storyboard */; };
@@ -63,6 +65,8 @@
 		5B12EC9922E6EFD1002BE87D /* HeadlineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineCell.swift; sourceTree = "<group>"; };
 		5B12EC9A22E6EFD1002BE87D /* HeadlineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadlineCell.xib; sourceTree = "<group>"; };
 		5B12EC9D22E6F3B1002BE87D /* HeadlinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesView.swift; sourceTree = "<group>"; };
+		5B12ECA122E7012A002BE87D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		5B12ECA722E70C3A002BE87D /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		5B2A15A222E6BAED004A93AD /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2A15A522E6BAED004A93AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B2A15A722E6BAED004A93AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +147,25 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		5B12ECA522E70145002BE87D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B12ECA122E7012A002BE87D /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B12ECA622E70C0E002BE87D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B2A15A722E6BAED004A93AD /* ViewController.swift */,
+				5B12EC9D22E6F3B1002BE87D /* HeadlinesView.swift */,
+				5B12EC9522E6D352002BE87D /* DetailViewController.swift */,
+				5B12EC9922E6EFD1002BE87D /* HeadlineCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5B2A159922E6BAED004A93AD = {
 			isa = PBXGroup;
 			children = (
@@ -169,11 +192,10 @@
 			isa = PBXGroup;
 			children = (
 				5B2A15A522E6BAED004A93AD /* AppDelegate.swift */,
-				5B2A15A722E6BAED004A93AD /* ViewController.swift */,
-				5B12EC9D22E6F3B1002BE87D /* HeadlinesView.swift */,
-				5B12EC9522E6D352002BE87D /* DetailViewController.swift */,
+				5B12ECA522E70145002BE87D /* Model */,
+				5B12ECA622E70C0E002BE87D /* View */,
 				5B2A15A922E6BAED004A93AD /* Main.storyboard */,
-				5B12EC9922E6EFD1002BE87D /* HeadlineCell.swift */,
+				5B12ECA722E70C3A002BE87D /* ArticleViewModel.swift */,
 				5B12EC9A22E6EFD1002BE87D /* HeadlineCell.xib */,
 				5B2A15AC22E6BAEF004A93AD /* Assets.xcassets */,
 				5B2A15AE22E6BAEF004A93AD /* LaunchScreen.storyboard */,
@@ -415,6 +437,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -424,6 +447,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,7 +484,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B12ECA222E7012A002BE87D /* Article.swift in Sources */,
 				5BF4A7F222E6C7B0003796F6 /* NetworkManager.swift in Sources */,
+				5B12ECA822E70C3A002BE87D /* ArticleViewModel.swift in Sources */,
 				5B12EC9822E6E11C002BE87D /* Colors.swift in Sources */,
 				5B2A15A822E6BAED004A93AD /* ViewController.swift in Sources */,
 				5BF4A7F622E6C928003796F6 /* FontConfig.swift in Sources */,
