@@ -29,6 +29,7 @@ class ArticleViewModel: NSObject {
                 let decoder = JSONDecoder()
                 let getData = try decoder.decode(Response.self, from: data)
                 try! realm.write {
+                    realm.deleteAll()
                     realm.create(Response.self, value: getData, update: true)
                 }
                 completion(true)
