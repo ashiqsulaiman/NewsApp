@@ -15,15 +15,13 @@ class HeadlineCell: UITableViewCell {
     @IBOutlet weak var headlineLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    let colours = ColourScheme()
+    let articleVM = ArticleViewModel()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-//        thumbnnailImageView.layer.masksToBounds = true
-        thumbnnailImageView.contentMode = .scaleAspectFill
-        thumbnnailImageView.clipsToBounds = true
-        
-        
+        setupUI()
+        thumbnnailImageView.addGradientToView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,10 +31,23 @@ class HeadlineCell: UITableViewCell {
     }
     
     func setupCell(with article: Article){
-//        headlineLabel.text = article.title
-//        sourceLabel.text = article.source?.name ?? ""
-//        dateLabel.text = article.publishedAt ?? ""
         thumbnnailImageView?.sd_setImage(with: URL(string: article.urlToImage ?? ""), placeholderImage: UIImage(named: "placeholder.png"))
+        headlineLabel.text = article.title
+        sourceLabel.text = article.source?.sourceName
+        dateLabel.text = articleVM.convertDateFormat(article.publishedAt!)
     }
     
+    func setupUI(){
+        self.contentView.backgroundColor = colours.bgColor
+        headlineLabel.font = UIFont.appBoldFontWith(size: 20.0)
+        sourceLabel.font = UIFont.appRegularFontWith(size: 12.0)
+        dateLabel.font = UIFont.appRegularFontWith(size: 12.0)
+        headlineLabel.textColor = colours.mainTextColor
+        dateLabel.textColor = colours.subTextColor
+        sourceLabel.textColor = colours.subTextColor
+        thumbnnailImageView.contentMode = .scaleAspectFill
+        thumbnnailImageView.clipsToBounds = true
+        
+    }
+
 }

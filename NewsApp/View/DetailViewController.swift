@@ -52,6 +52,7 @@ class DetailViewController: UIViewController {
         contentLabel.textColor = colours.subTextColor
         articleImage.contentMode = .scaleAspectFill
         self.view.backgroundColor = colours.navBarTheme
+        articleImage.addGradientToView()
     }
 
     @IBAction func dismissView(_ sender: Any) {

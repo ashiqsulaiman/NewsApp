@@ -42,3 +42,13 @@ class ColourScheme {
         }
     }
 }
+
+extension UIView {
+    func addGradientToView(){
+        let gradientLayer:CAGradientLayer = CAGradientLayer()
+        gradientLayer.frame.size = self.frame.size
+        gradientLayer.colors =
+            [UIColor.clear.cgColor,UIColor.black.withAlphaComponent(1).cgColor]
+        self.layer.addSublayer(gradientLayer)
+    }
+}

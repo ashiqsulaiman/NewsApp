@@ -11,7 +11,7 @@
 		0D0CB2C33F239DF647AEF873 /* Pods_NewsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D944AB955B5DDE702B7FF0EB /* Pods_NewsAppUITests.framework */; };
 		5B12EC9322E6D223002BE87D /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12EC9222E6D223002BE87D /* Loader.swift */; };
 		5B12EC9622E6D352002BE87D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12EC9522E6D352002BE87D /* DetailViewController.swift */; };
-		5B12EC9822E6E11C002BE87D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12EC9722E6E11C002BE87D /* Colors.swift */; };
+		5B12EC9822E6E11C002BE87D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12EC9722E6E11C002BE87D /* Theme.swift */; };
 		5B12EC9B22E6EFD1002BE87D /* HeadlineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12EC9922E6EFD1002BE87D /* HeadlineCell.swift */; };
 		5B12EC9C22E6EFD1002BE87D /* HeadlineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B12EC9A22E6EFD1002BE87D /* HeadlineCell.xib */; };
 		5B12EC9E22E6F3B1002BE87D /* HeadlinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B12EC9D22E6F3B1002BE87D /* HeadlinesView.swift */; };
@@ -62,7 +62,7 @@
 		50E8210A90F26B10C1083846 /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
 		5B12EC9222E6D223002BE87D /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		5B12EC9522E6D352002BE87D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		5B12EC9722E6E11C002BE87D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		5B12EC9722E6E11C002BE87D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		5B12EC9922E6EFD1002BE87D /* HeadlineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineCell.swift; sourceTree = "<group>"; };
 		5B12EC9A22E6EFD1002BE87D /* HeadlineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadlineCell.xib; sourceTree = "<group>"; };
 		5B12EC9D22E6F3B1002BE87D /* HeadlinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesView.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 				5BF4A7F322E6C7F2003796F6 /* URLManager.swift */,
 				5BF4A7F522E6C928003796F6 /* FontConfig.swift */,
 				5B12EC9222E6D223002BE87D /* Loader.swift */,
-				5B12EC9722E6E11C002BE87D /* Colors.swift */,
+				5B12EC9722E6E11C002BE87D /* Theme.swift */,
 				5B12ECA922E83364002BE87D /* RealmExtensions.swift */,
 			);
 			path = Utilities;
@@ -491,7 +491,7 @@
 				5BF4A7F222E6C7B0003796F6 /* NetworkManager.swift in Sources */,
 				5B12ECA822E70C3A002BE87D /* ArticleViewModel.swift in Sources */,
 				5B12ECAA22E83364002BE87D /* RealmExtensions.swift in Sources */,
-				5B12EC9822E6E11C002BE87D /* Colors.swift in Sources */,
+				5B12EC9822E6E11C002BE87D /* Theme.swift in Sources */,
 				5B2A15A822E6BAED004A93AD /* ViewController.swift in Sources */,
 				5BF4A7F622E6C928003796F6 /* FontConfig.swift in Sources */,
 				5B2A15A622E6BAED004A93AD /* AppDelegate.swift in Sources */,

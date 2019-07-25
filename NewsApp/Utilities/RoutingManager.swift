@@ -47,6 +47,7 @@ class Router {
     func loadDetailView(with article: Article){
         let view: DetailViewController = UIStoryboard.load(from: .main, identifier: .detail) as! DetailViewController
         view.selectedArticle = article
+        view.modalTransitionStyle = .crossDissolve
         if let topVC = UIApplication.topViewController() {
             topVC.navigationController?.present(view, animated: true, completion: {})
         }

@@ -14,8 +14,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "headCell") as! HeadlineCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "headlineCell") as! HeadlineCell
         let article = realm.objects(Article.self)[indexPath.item]
+        cell.selectionStyle = .none
         cell.setupCell(with: article)
         return cell
     }

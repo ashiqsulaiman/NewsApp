@@ -19,6 +19,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="206.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dXk-K5-LJc">
+                        <rect key="frame" x="16" y="16" width="288" height="190.5"/>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5a-Su-ojt">
                         <rect key="frame" x="20" y="142" width="280" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -37,11 +40,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dXk-K5-LJc">
-                        <rect key="frame" x="16" y="16" width="288" height="190.5"/>
-                    </imageView>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="cvw-41-NTH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="1Eq-b8-Ta7"/>
                     <constraint firstAttribute="bottom" secondItem="cvw-41-NTH" secondAttribute="bottom" constant="10" id="1eD-dO-uMd"/>
@@ -57,7 +56,14 @@
                     <constraint firstAttribute="bottom" secondItem="dXk-K5-LJc" secondAttribute="bottom" id="zkl-Ax-Waz"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="3RY-Xm-Sfn" id="x5u-W4-Pcc"/>
+                <outlet property="headlineLabel" destination="S5a-Su-ojt" id="L3m-fV-OcO"/>
+                <outlet property="sourceLabel" destination="cvw-41-NTH" id="mr1-Vn-80J"/>
+                <outlet property="thumbnnailImageView" destination="dXk-K5-LJc" id="SaL-Wj-7tq"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="205.24553571428569"/>
         </tableViewCell>
     </objects>
