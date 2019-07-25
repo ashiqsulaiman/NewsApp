@@ -38,7 +38,7 @@ class Response: Object, Decodable {
 
 
 class Article: Object, Decodable {
-    dynamic var source: Source?
+    @objc dynamic var source: Source?
     @objc dynamic var author: String?
     @objc dynamic var title: String = ""
     @objc dynamic var articleDescription: String?
@@ -56,7 +56,7 @@ class Article: Object, Decodable {
     public required convenience init(from decoder: Decoder) throws {
         self.init()
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.source = try container.decodeIfPresent(Source.self, forKey: .source)
+        self.source = try container.decode(Source.self, forKey: .source)
         self.author = try container.decodeIfPresent(String.self, forKey: .author)
         self.title = try container.decode(String.self, forKey: .title)
         self.articleDescription = try container.decodeIfPresent(String.self, forKey: .articleDescription)
@@ -70,16 +70,17 @@ class Article: Object, Decodable {
 
 class Source: Object, Decodable {
     @objc dynamic var id: String?
-    @objc dynamic var name: String = ""
+    @objc dynamic var sourceName: String?
     
     enum CodingKeys: String, CodingKey {
-        case id, name
+        case id
+        case sourceName = "name"
     }
     
     public required convenience init(from decoder: Decoder) throws {
         self.init()
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decodeIfPresent(String.self, forKey: .id)
-        self.name = try container.decode(String.self, forKey: .name)
+        self.sourceName = try container.decodeIfPresent(String.self, forKey: .sourceName)
     }
 }

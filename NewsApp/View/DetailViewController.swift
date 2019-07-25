@@ -34,7 +34,7 @@ class DetailViewController: UIViewController {
     func updateView(){
         if let article = selectedArticle {
         headlineLabel.text = article.title
-        sourceLabel.text = article.source?.name
+        sourceLabel.text = article.source?.sourceName
         dateLabel.text = articleVM.convertDateFormat(article.publishedAt!)
         contentLabel.text = article.content
         articleImage?.sd_setImage(with: URL(string: article.urlToImage ?? ""), placeholderImage: UIImage(named: "placeholder.png"))
